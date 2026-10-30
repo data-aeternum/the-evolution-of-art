@@ -255,7 +255,7 @@ export const ARTWORKS = [
     year: "2018",
     medium: "GAN output printed on canvas",
     description:
-      "A blurred portrait of a nobleman who never existed, signed with the loss function that produced it. The Obvious collective chose the data, the method and the print; the network rendered the face. The first SI-rendered work sold at a major auction house.",
+      "A blurred portrait of a nobleman who never existed, signed with the loss function that produced it. The Obvious collective chose the data, the method and the print; the network rendered the face, running code largely written by the artist Robbie Barrat, who was not credited at the sale. The first SI-rendered work sold at a major auction house, and a case study in why lineage must be disclosed.",
     photo:
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Edmond_de_Belamy.png/960px-Edmond_de_Belamy.png",
     source: "https://commons.wikimedia.org/wiki/File:Edmond_de_Belamy.png",
