@@ -300,16 +300,27 @@ article {
   }
 }
 
-/* ---------- Collaboration meter ---------- */
+/* ---------- Collaboration meter: two bars, human always full, SI never full ---------- */
 
 .collab {
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: auto auto;
   align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  column-gap: 10px;
+  row-gap: 3px;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.collab__row {
+  display: contents;
+}
+
+.collab__end {
+  text-align: right;
+  opacity: 0.85;
 }
 
 .collab__cells {
@@ -319,24 +330,36 @@ article {
 
 .collab__cell {
   width: 12px;
-  height: 8px;
+  height: 7px;
   border-radius: 2px;
-  background: rgb(128 128 128 / 0.3);
+  background: rgb(128 128 128 / 0.25);
   border: 1px solid rgb(128 128 128 / 0.4);
 }
 
-.collab__cell.is-on {
+.collab__cell--human.is-on {
+  background: var(--gilt);
+  border-color: var(--gilt);
+}
+
+.collab__cell--si.is-on {
   background: var(--machine);
   border-color: var(--machine);
   box-shadow: 0 0 6px rgb(39 196 214 / 0.6);
 }
 
+/* the last SI cell never lights: no work here was made by SI alone */
+.collab__cell--si.is-never {
+  background: transparent;
+  border-style: dashed;
+}
+
 .collab__label {
+  grid-column: 1 / -1;
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
   font-size: 0.8rem;
-  margin-left: 4px;
+  margin-top: 2px;
 }
 
 /* ---------- Artwork page ---------- */

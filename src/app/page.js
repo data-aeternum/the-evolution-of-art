@@ -20,7 +20,7 @@ export default async function Home(props) {
         <h1>Twenty thousand years of making images.</h1>
         <p>
           A gallery that runs from the cave wall to the neural net. Every work carries a
-          collaboration score, from fully human to SI-rendered. Visitors write critiques; Gemini
+          collaboration meter: the human bar is always full, the SI bar never is. Visitors write critiques; Gemini
           reads them and writes the curator's note.
         </p>
         <p className="hero__disclosure">

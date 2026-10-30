@@ -5,11 +5,13 @@
 
 // The four levels of the human/SI collaboration scale (stored as the number 1-4 in Firestore).
 // SI = super intelligence. Every SI-rendered work in this gallery was piloted by a human art director.
+// The meter draws the human bar full at every level and never fills the SI bar: the imagination,
+// the direction and the infrastructure behind these works are human; the SI is a collaborator.
 export const COLLAB_LEVELS = [
   { value: 1, label: "Human", blurb: "Made entirely by human hands." },
   { value: 2, label: "Human-led", blurb: "A human composed it; SI assisted with the rendering." },
   { value: 3, label: "Co-created", blurb: "A human art director and SI shaped it together." },
-  { value: 4, label: "SI-rendered", blurb: "Rendered by SI, piloted by a human art director from brief to final selection." },
+  { value: 4, label: "SI-rendered", blurb: "Rendered by SI under a human art director who set the brief, steered every pass and made the final selection. Collaborative, equal at best." },
 ];
 
 // Turn a stored collaboration number into its label (e.g. 3 -> "Co-created").
