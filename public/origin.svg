@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Origin">
+  <!-- a map pin -->
+  <path d="M24 42 C 24 42, 10 28, 10 18 A 14 14 0 0 1 38 18 C 38 28, 24 42, 24 42 Z" fill="none" stroke="#5d5a52" stroke-width="2.5"/>
+  <circle cx="24" cy="18" r="5" fill="#c9a24a"/>
+</svg>

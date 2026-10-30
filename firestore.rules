@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+
+  // Determine if the value of the field "key" is the same
+  // before and after the request.
+  function unchanged(key) {
+    return (key in resource.data)
+      && (key in request.resource.data)
+      && (resource.data[key] == request.resource.data[key]);
+  }
+
+  match /databases/{database}/documents {
+    // Artworks:
+    //   - Anyone can read the gallery
+    //   - Signed-in users can add artworks (seeding the collection)
+    //   - Signed-in users can update an artwork (new image, rating totals) as long as the title stays the same
+    //   - Deletes are not allowed (default)
+    match /artworks/{artworkId} {
+      allow read;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null
+                    && unchanged("title");
+
+      // Critiques:
+      //   - Anyone can read critiques
+      //   - Signed-in users can create a critique
+      //   - A critique can only be updated by the user who wrote it
+      //   - Deletes are not allowed (default)
+      match /critiques/{critiqueId} {
+        allow read;
+        allow create: if request.auth != null;
+        allow update: if request.auth != null
+                      && request.resource.data.userId == request.auth.uid;
+      }
+    }
+  }
+}

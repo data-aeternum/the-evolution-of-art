@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Era">
+  <!-- an hourglass -->
+  <path d="M14 8 H34 V14 L26 24 L34 34 V40 H14 V34 L22 24 L14 14 Z" fill="none" stroke="#5d5a52" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M18 36 H30 L24 29 Z" fill="#c9a24a"/>
+</svg>

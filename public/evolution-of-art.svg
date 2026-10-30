@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="The Evolution of Art">
+  <!-- left half: a brush stroke (the human hand) -->
+  <path d="M8 46 C 14 30, 20 24, 30 16 C 26 26, 22 34, 20 44 C 18 50, 12 52, 8 46 Z" fill="#c9a24a"/>
+  <path d="M30 16 L 36 10" stroke="#e3c470" stroke-width="3" stroke-linecap="round"/>
+  <!-- right half: a neural node graph (the machine) -->
+  <g stroke="#27c4d6" stroke-width="2" fill="none">
+    <line x1="40" y1="18" x2="52" y2="30"/>
+    <line x1="40" y1="42" x2="52" y2="30"/>
+    <line x1="40" y1="18" x2="40" y2="42"/>
+    <line x1="52" y1="30" x2="58" y2="30"/>
+  </g>
+  <g fill="#7fe3ee">
+    <circle cx="40" cy="18" r="4"/>
+    <circle cx="40" cy="42" r="4"/>
+    <circle cx="52" cy="30" r="4"/>
+    <circle cx="58" cy="30" r="2.5"/>
+  </g>
+</svg>
