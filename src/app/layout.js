@@ -1,8 +1,20 @@
 import "@/src/app/styles.css";
 import Header from "@/src/components/Header.jsx";
 import { getAuthenticatedAppForUser } from "@/src/lib/firebase/serverApp";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 // Force Next.js to render this layout on every request (it depends on the signed-in user)
 export const dynamic = "force-dynamic";
+
+// The two typefaces, self-hosted by next/font at build time (a CSS @import of Google Fonts
+// is dropped by Next's CSS bundling, so the fallbacks were rendering instead)
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-display-face",
+  display: "swap",
+});
+const text = Inter({ subsets: ["latin"], variable: "--font-text-face", display: "swap" });
 
 export const metadata = {
   title: "The Evolution of Art",
@@ -13,11 +25,11 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const { currentUser } = await getAuthenticatedAppForUser();
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${text.variable}`}>
       <body>
         <Header initialUser={currentUser?.toJSON()} />
 
-        <main>{children}</main>
+        <main id="main">{children}</main>
 
         <footer className="site-footer">
           <p>

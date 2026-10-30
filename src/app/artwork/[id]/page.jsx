@@ -14,7 +14,7 @@ export default async function ArtworkPage(props) {
   const artwork = await getArtworkById(getFirestore(firebaseServerApp), params.id);
 
   return (
-    <main className="main__artwork">
+    <div className="main__artwork">
       <Artwork id={params.id} initialArtwork={artwork} initialUserId={currentUser?.uid || ""}>
         <Suspense fallback={<CuratorNoteSkeleton />}>
           <CuratorNote artworkId={params.id} />
@@ -23,6 +23,6 @@ export default async function ArtworkPage(props) {
       <Suspense fallback={<CritiquesListSkeleton numCritiques={artwork.numRatings} />}>
         <CritiquesList artworkId={params.id} userId={currentUser?.uid || ""} />
       </Suspense>
-    </main>
+    </div>
   );
 }
