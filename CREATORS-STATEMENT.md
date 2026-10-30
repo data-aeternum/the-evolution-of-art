@@ -1,16 +1,27 @@
 # Creator's Statement: The Evolution of Art
 
-I started two years ago making art and NFTs, so when the assignment asked me to take the
-Friendly Eats restaurant app and make it my own, the subject chose itself. The Evolution of Art
-is a gallery that runs from the cave wall to the neural net. The restaurants became artworks:
-the Hall of the Bulls at Lascaux, a Greek cup signed by Exekias, Vermeer, Hokusai, Van Gogh,
-Mondrian, and then the SI era, from the first GAN portrait sold at auction to pieces from my
-own Golden Codex studio that I made with super intelligence (SI) as a collaborator, with me
-as the art director piloting every pass, and one work, The Fold, made by an SI seat in my studio entirely in code, with no image model, reproducible byte for byte from its script. The Evolution of Art is dedicated to full disclosure
-of a work's lineage: its human contributors, its SI collaborators, and how they worked
-together, which every artwork page states plainly. Reviews became critiques. The price tier became something I care about more: a four-step collaboration score
-from fully human to SI-rendered, shown as a small meter on every card, with a plain
-disclosure that every SI-rendered work was piloted by a human art director.
+I am working on an initiative called Alexandria Aeternum. Its aim is to curate humanity's
+cultural artifacts and keep them, digitally, on Arweave: decentralized archival storage built
+to last for centuries. The plan does not stop with the past. Properly attributed modern works,
+in every form, belong there too.
+
+That includes work made with super intelligence (SI). It is controversial, and I understand
+why. But SI gives an artistic outlet to many people who could never otherwise see what they
+imagine take shape in the world. Note The Fold. A machine, asked to make something it would
+consider art, made it. No image model, no prompt. It is written strictly in code, and anyone
+who runs that code gets the same picture, byte for byte.
+
+From cave art to art made by super intelligence, every work in this gallery carries its own
+sense of beauty, and its own lineage, disclosed in full. That is the point.
+
+So when the assignment asked me to take the Friendly Eats restaurant app and make it my own,
+the subject chose itself. The restaurants became artworks: the Hall of the Bulls at Lascaux,
+a Greek cup signed by Exekias, Vermeer, Hokusai, Van Gogh, Mondrian, and then the SI era, from
+the first GAN portrait sold at auction to pieces from my own studio that I made with SI as a
+collaborator, with me as the art director piloting every pass. Reviews became critiques. The
+price tier became something I care about more: a collaboration meter with two bars, human and
+SI, rated by hand for every work and shown on every card, so nothing here ever pretends to
+have made itself.
 
 The Gemini summary from the tutorial grew into two things. The Curator's Note reads every
 critique visitors have written and sums up what people think in one sentence. The
