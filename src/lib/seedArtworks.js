@@ -27,7 +27,9 @@ export async function generateArtworksAndCritiques() {
       );
 
       // Pick one sample critique at random (rating and text stay together).
-      const sample = CRITIQUES[randomNumberBetween(0, CRITIQUES.length - 1)];
+      // The fully human masterpieces only ever draw 4 and 5 star critiques.
+      const pool = artwork.collab === 1 ? CRITIQUES.filter((c) => c.rating >= 4) : CRITIQUES;
+      const sample = pool[randomNumberBetween(0, pool.length - 1)];
 
       critiquesData.push({
         rating: sample.rating,

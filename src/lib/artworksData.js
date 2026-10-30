@@ -294,15 +294,15 @@ export const ARTWORKS = [
   },
   {
     title: "Irresistible Urge",
-    artist: "Tad MacPherson",
-    aiModel: "Golden Codex SI (diffusion)",
+    artist: "Tad MacPherson, with Artîswa",
+    aiModel: "Artîswa (Golden Codex SI persona)",
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 3,
     year: "2025",
-    medium: "Human-directed diffusion render",
+    medium: "Genesis work: human-directed diffusion render",
     description:
-      "Neither partner could have made this alone. A study in what co-creation looks like when the human art director keeps the final say.",
+      "A Genesis work, made together by Tad MacPherson and the SI persona Artîswa. Neither partner could have made this alone: a study in what co-creation looks like when the human art director keeps the final say.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/gcx-irresistible-urge.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/gcx-irresistible-urge.h264.mp4",
