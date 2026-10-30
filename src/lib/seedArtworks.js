@@ -27,8 +27,12 @@ export async function generateArtworksAndCritiques() {
       );
 
       // Pick one sample critique at random (rating and text stay together).
-      // The fully human masterpieces only ever draw 4 and 5 star critiques.
-      const pool = artwork.collab === 1 ? CRITIQUES.filter((c) => c.rating >= 4) : CRITIQUES;
+      // The fully human masterpieces only draw 4 and 5 star critiques written for human work,
+      // so no critique ever credits an SI that was not there.
+      const pool =
+        artwork.collab === 1
+          ? CRITIQUES.filter((c) => c.fits !== "si" && c.rating >= 4)
+          : CRITIQUES.filter((c) => c.fits !== "human");
       const sample = pool[randomNumberBetween(0, pool.length - 1)];
 
       critiquesData.push({
