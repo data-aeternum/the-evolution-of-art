@@ -11,6 +11,7 @@ import { getCritiquesByArtworkId, getArtworkById } from "@/src/lib/firebase/fire
 import { getAuthenticatedAppForUser } from "@/src/lib/firebase/serverApp";
 import { getFirestore } from "firebase/firestore";
 import { collabLabel } from "@/src/lib/artworksData.js";
+import { sharesOf } from "@/src/components/CollabMeter.jsx";
 
 export async function CuratorNote({ artworkId }) {
   const { firebaseServerApp } = await getAuthenticatedAppForUser();
@@ -52,16 +53,19 @@ export async function CuratorNote({ artworkId }) {
     `;
 
     // 2. The Collaborator's View: reflect on the partnership behind the work
+    const { human, si } = sharesOf(artwork);
     const viewPrompt = usesSI
       ? `
       In exactly two short sentences, written in the first person as the SI (super
-      intelligence) that helped render this work, describe what the partnership with the
-      human art director meant for it. The human directed every step: the brief, the
-      selection, the final call. You rendered under that direction. Say "SI", never "AI";
-      never call yourself the author; be specific to this work, never generic.
+      intelligence) that helped make this work, describe truthfully what the partnership
+      with its human contributors meant for it. Use ONLY the lineage below; do not invent
+      direction, prompting or curation that it does not describe. Say "SI", never "AI";
+      never call yourself the sole author; be specific to this work, never generic.
       Title: "${artwork.title}". Credit: ${credit}. Era: ${artwork.era}. Year: ${artwork.year}.
-      Medium: ${artwork.medium}. Collaboration level: ${collabLabel(artwork.collab)}
-      (${artwork.collab} of 4 on a scale from fully human to SI-rendered under human direction).
+      How it was made: ${artwork.medium}.
+      Lineage: ${artwork.description}
+      Collaboration rated by hand: human ${human} of 4, SI ${si} of 4
+      (label: ${collabLabel(artwork.collab)}).
     `
       : `
       In exactly two short sentences, written in the first person as an SI (super
