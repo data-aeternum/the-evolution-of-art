@@ -46,7 +46,9 @@ const ArtworkDetails = ({
           <h2>{artwork.title}</h2>
           <p className="details__artist">
             {artwork.artist}
-            {artwork.aiModel && artwork.aiModel !== "None" && (
+            {/* Skip "with ..." when the artist line already names the SI partner
+                ("directing VīGOR", ", with Artîswa"); the lineage block below lists it in full */}
+            {artwork.aiModel && artwork.aiModel !== "None" && !/directing|, with|commissioned/.test(artwork.artist) && (
               <span className="details__ai"> with {artwork.aiModel}</span>
             )}
           </p>
