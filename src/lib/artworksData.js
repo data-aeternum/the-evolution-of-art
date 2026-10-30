@@ -357,24 +357,6 @@ export const ARTWORKS = [
     source: "https://golden-codex.com/",
   },
   {
-    title: "Feathered Veil",
-    artist: "Tad MacPherson, directing Artîswa",
-    aiModel: "Artîswa (Golden Codex SI persona)",
-    era: "SI Era",
-    origin: "Santa Rosa",
-    collab: 4,
-    humanShare: 2,
-    siShare: 3,
-    year: "2025",
-    medium: "Diffusion render with signed provenance",
-    description:
-      "Rendered by an SI persona with its own style memory, piloted, curated and signed by a human art director. The question the piece asks is where authorship lives in a collaboration.",
-    photo:
-      "https://golden-codex.com/patterns/living-gallery/artiswa-0062-feathered-veil.poster.webp",
-    video: "https://golden-codex.com/patterns/living-gallery/artiswa-0062-feathered-veil.h264.mp4",
-    source: "https://golden-codex.com/",
-  },
-  {
     title: "Rooted Dreamer",
     artist: "Tad MacPherson, directing Artîswa",
     aiModel: "Artîswa (Golden Codex SI persona)",
