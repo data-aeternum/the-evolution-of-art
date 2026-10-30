@@ -40,19 +40,15 @@ export async function CuratorNote({ artworkId }) {
         : artwork.artist;
 
     // 1. Curator's Note: summarize the visitors' critiques (only if there are any)
-    let note = null;
-    if (critiques.length > 0) {
-      const notePrompt = `
-        You are the curator of a gallery about the evolution of art from fully human
-        works to human/AI collaborations. Visitors have written critiques of
-        "${artwork.title}" by ${credit}. Each critique below is separated by a
-        '${separator}' character. Write ONE sentence, in a warm curatorial voice,
-        summarizing what visitors think of this work. Do not use lists or quotes.
+    const notePrompt = `
+      You are the curator of a gallery about the evolution of art from fully human
+      works to human/AI collaborations. Visitors have written critiques of
+      "${artwork.title}" by ${credit}. Each critique below is separated by a
+      '${separator}' character. Write ONE sentence, in a warm curatorial voice,
+      summarizing what visitors think of this work. Do not use lists or quotes.
 
-        Critiques: ${critiques.map((c) => c.text).join(separator)}
-      `;
-      note = (await ai.generate(notePrompt)).text;
-    }
+      Critiques: ${critiques.map((c) => c.text).join(separator)}
+    `;
 
     // 2. The Machine's View: reflect on the human/AI balance of the work
     const viewPrompt = `
@@ -63,7 +59,14 @@ export async function CuratorNote({ artworkId }) {
       (${artwork.collab} of 4 on a scale from fully human to AI-led).
       Be specific to this work, never generic, and never claim to have made it.
     `;
-    const view = (await ai.generate(viewPrompt)).text;
+
+    // Ask Gemini both questions at the same time so the page is not waiting twice
+    const [noteResult, viewResult] = await Promise.all([
+      critiques.length > 0 ? ai.generate(notePrompt) : Promise.resolve(null),
+      ai.generate(viewPrompt),
+    ]);
+    const note = noteResult ? noteResult.text : null;
+    const view = viewResult.text;
 
     return (
       <div className="curator__note">
