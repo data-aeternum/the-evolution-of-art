@@ -1315,3 +1315,21 @@ footer {
     text-underline-offset: 3px;
   }
 }
+
+/* ---------- Tagline under a title (e.g. "Drawn in code, no image gen model") ---------- */
+
+.mv-lg-tagline {
+  margin-top: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gilt-2);
+}
+
+.artwork__tagline {
+  margin-top: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a6d2a;
+}

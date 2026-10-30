@@ -202,6 +202,7 @@ export default function FanGallery({ artworks, onRate, userId }) {
                       {artwork.artist}
                       {artwork.aiModel && artwork.aiModel !== "None" ? ", with SI" : ""}
                     </p>
+                    {artwork.tagline && <p className="mv-lg-tagline">{artwork.tagline}</p>}
                   </div>
                   <span className="mv-lg-chip">{artwork.era}</span>
                 </div>

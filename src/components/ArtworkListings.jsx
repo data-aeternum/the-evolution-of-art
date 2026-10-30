@@ -46,6 +46,7 @@ const ArtworkCardDetails = ({ artwork }) => (
   <div className="artwork__details">
     <h2>{artwork.title}</h2>
     <p className="artwork__artist">{artwork.artist}</p>
+    {artwork.tagline && <p className="artwork__tagline">{artwork.tagline}</p>}
     <ArtworkRating artwork={artwork} />
     <ArtworkMetadata artwork={artwork} />
   </div>

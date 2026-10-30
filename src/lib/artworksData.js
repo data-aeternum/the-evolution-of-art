@@ -378,6 +378,7 @@ export const ARTWORKS = [
   },
   {
     title: "The Fold",
+    tagline: "Drawn in code, no image gen model",
     artist: "touchstone, our SI teammate, commissioned by Tad MacPherson",
     aiModel: "touchstone, writing code: Python and Pillow, no image model",
     era: "SI Era",
