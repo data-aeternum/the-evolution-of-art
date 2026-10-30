@@ -18,16 +18,17 @@ export default async function Home(props) {
     <main className="main__home">
       <section className="hero">
         <h1>Twenty thousand years of making images.</h1>
-        <p>
-          A gallery that runs from the cave wall to the neural net. Every work carries a
-          collaboration meter with two bars, human and SI, rated by hand for each work and disclosed. Visitors write critiques; Gemini
-          reads them and writes the curator's note.
-        </p>
+        <div className="hero__statement">
+          <p>I am working on an initiative called Alexandria Aeternum. Its aim is to curate humanity&#39;s cultural artifacts and keep them, digitally, on Arweave: decentralized archival storage built to last for centuries. The plan does not stop with the past. Properly attributed modern works, in every form, belong there too.</p>
+          <p>That includes work made with super intelligence (SI). It is controversial, and I understand why. But SI gives an artistic outlet to many people who could never otherwise see what they imagine take shape in the world. Note The Fold. A machine, asked to make something it would consider art, made it. No image model, no prompt. It is written strictly in code, and anyone who runs that code gets the same picture, byte for byte.</p>
+          <p>From cave art to art made by super intelligence, every work in this gallery carries its own sense of beauty, and its own lineage, disclosed in full. That is the point.</p>
+          <p>So when the assignment asked me to take the Friendly Eats restaurant app and make it my own, the subject chose itself. The restaurants became artworks: the Hall of the Bulls at Lascaux, a Greek cup signed by Exekias, Vermeer, Hokusai, Van Gogh, Mondrian, and then the SI era, from the first GAN portrait sold at auction to pieces from my own studio that I made with SI as a collaborator, with me as the art director piloting every pass.</p>
+          <p>It is controversial, beautiful, and made with purpose. Let people be bothered if they must. That is what progress sometimes looks like.</p>
+        </div>
         <p className="hero__disclosure">
-          The Evolution of Art is dedicated to full disclosure of a work's lineage: its human
-          contributors, its SI collaborators, and how they worked together. SI means super
-          intelligence. Every SI-rendered work here was piloted by a human art director, from
-          the brief to the final selection. The SI is a collaborator, never the author.
+          SI means super intelligence. Every SI-rendered work here was commissioned and directed by a
+          human; the two bars on every card are rated by hand and disclosed. The SI is a
+          collaborator, never the author. Tad MacPherson
         </p>
       </section>
       <ArtworkListings

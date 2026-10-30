@@ -176,9 +176,10 @@ header {
 }
 
 .hero {
-  width: 75%;
+  width: 90%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 48px 40px 8px;
+  padding: 40px 40px 8px;
 
   & h1 {
     font-size: clamp(2rem, 4vw, 3.2rem);
@@ -1332,4 +1333,44 @@ footer {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #8a6d2a;
+}
+
+/* ---------- The creator's statement on the front page: wide frame, two columns on desktop ---------- */
+
+.hero__statement {
+  margin-top: 12px;
+  padding: 16px 20px;
+  border: 1px solid rgb(201 162 74 / 0.35);
+  border-left: 3px solid var(--gilt);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgb(201 162 74 / 0.06);
+  color: var(--paper);
+  font-size: 0.92rem;
+  line-height: 1.55;
+
+  & p {
+    margin: 0 0 10px;
+    break-inside: avoid;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--gilt-2);
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__statement {
+    columns: 2;
+    column-gap: 36px;
+  }
+}
+
+.hero .hero__disclosure {
+  font-size: 0.8rem;
+  color: var(--paper-2);
+  background: transparent;
+  border-left-color: rgb(201 162 74 / 0.4);
 }
