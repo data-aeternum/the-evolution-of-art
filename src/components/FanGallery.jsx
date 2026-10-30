@@ -217,7 +217,7 @@ export default function FanGallery({ artworks, onRate, userId }) {
           <ul className="artwork__rating">{renderStars(current.avgRating)}</ul>
           <span>({current.numRatings})</span>
         </div>
-        <CollabMeter level={current.collab} />
+        <CollabMeter artwork={current} />
         <div className="mv-lg-focus__actions">
           <button type="button" className="mv-lg-rate" onClick={() => onRate(current)}>
             {userId ? "Rate this work" : "Sign in to rate"}

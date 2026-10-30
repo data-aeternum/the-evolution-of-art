@@ -5,8 +5,8 @@
 
 // The four levels of the human/SI collaboration scale (stored as the number 1-4 in Firestore).
 // SI = super intelligence. Every SI-rendered work in this gallery was piloted by a human art director.
-// The meter draws the human bar full at every level and never fills the SI bar: the imagination,
-// the direction and the infrastructure behind these works are human; the SI is a collaborator.
+// Each work also carries humanShare and siShare (0-4), rated by hand and disclosed: the meter draws
+// both bars from those. The collab level is the filter label; the bars are the honest picture.
 export const COLLAB_LEVELS = [
   { value: 1, label: "Human", blurb: "Made entirely by human hands." },
   { value: 2, label: "Human-led", blurb: "A human composed it; SI assisted with the rendering." },
@@ -64,6 +64,8 @@ export const ARTWORKS = [
     era: "Prehistoric",
     origin: "Lascaux",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 17,000 BCE",
     medium: "Mineral pigment on limestone",
     description:
@@ -78,6 +80,8 @@ export const ARTWORKS = [
     era: "Ancient",
     origin: "Athens",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 530 BCE",
     medium: "Black-figure ceramic kylix",
     description:
@@ -94,6 +98,8 @@ export const ARTWORKS = [
     era: "Renaissance",
     origin: "Florence",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 1485",
     medium: "Tempera on canvas",
     description:
@@ -110,6 +116,8 @@ export const ARTWORKS = [
     era: "Renaissance",
     origin: "Florence",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 1503-1506",
     medium: "Oil on poplar panel",
     description:
@@ -126,6 +134,8 @@ export const ARTWORKS = [
     era: "Baroque",
     origin: "Delft",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 1657-1658",
     medium: "Oil on canvas",
     description:
@@ -142,6 +152,8 @@ export const ARTWORKS = [
     era: "Baroque",
     origin: "Amsterdam",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1659",
     medium: "Oil on canvas",
     description:
@@ -158,6 +170,8 @@ export const ARTWORKS = [
     era: "Ukiyo-e",
     origin: "Edo",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "c. 1831",
     medium: "Woodblock print",
     description:
@@ -173,6 +187,8 @@ export const ARTWORKS = [
     era: "Impressionism",
     origin: "Giverny",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1906",
     medium: "Oil on canvas",
     description:
@@ -189,6 +205,8 @@ export const ARTWORKS = [
     era: "Post-Impressionism",
     origin: "Saint-Rémy",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1889",
     medium: "Oil on canvas",
     description:
@@ -205,6 +223,8 @@ export const ARTWORKS = [
     era: "Expressionism",
     origin: "Oslo",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1893",
     medium: "Oil, tempera and pastel on cardboard",
     description:
@@ -221,6 +241,8 @@ export const ARTWORKS = [
     era: "Art Nouveau",
     origin: "Vienna",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1907-1908",
     medium: "Oil and gold leaf on canvas",
     description:
@@ -236,6 +258,8 @@ export const ARTWORKS = [
     era: "Modernism",
     origin: "Paris",
     collab: 1,
+    humanShare: 4,
+    siShare: 0,
     year: "1930",
     medium: "Oil on canvas",
     description:
@@ -252,6 +276,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Paris",
     collab: 4,
+    humanShare: 2,
+    siShare: 3,
     year: "2018",
     medium: "GAN output printed on canvas",
     description:
@@ -267,6 +293,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 3,
+    humanShare: 3,
+    siShare: 3,
     year: "2025",
     medium: "Human-directed diffusion render",
     description:
@@ -283,6 +311,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 2,
+    humanShare: 4,
+    siShare: 2,
     year: "2025",
     medium: "Human-directed diffusion render",
     description:
@@ -299,6 +329,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 3,
+    humanShare: 3,
+    siShare: 3,
     year: "2025",
     medium: "Genesis work: human-directed diffusion render",
     description:
@@ -315,6 +347,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 4,
+    humanShare: 2,
+    siShare: 3,
     year: "2025",
     medium: "Diffusion render with signed provenance",
     description:
@@ -331,6 +365,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 4,
+    humanShare: 2,
+    siShare: 3,
     year: "2025",
     medium: "Diffusion render with signed provenance",
     description:
@@ -347,6 +383,8 @@ export const ARTWORKS = [
     era: "SI Era",
     origin: "Santa Rosa",
     collab: 4,
+    humanShare: 1,
+    siShare: 4,
     year: "2026",
     medium: "100% code: Python + Pillow, fixed seed 20261027, no image generation; reproducible byte for byte (sha256 2aa72a96…)",
     description:

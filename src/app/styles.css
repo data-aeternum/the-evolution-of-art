@@ -347,12 +347,6 @@ article {
   box-shadow: 0 0 6px rgb(39 196 214 / 0.6);
 }
 
-/* the last SI cell never lights: no work here was made by SI alone */
-.collab__cell--si.is-never {
-  background: transparent;
-  border-style: dashed;
-}
-
 .collab__label {
   grid-column: 1 / -1;
   font-weight: 600;

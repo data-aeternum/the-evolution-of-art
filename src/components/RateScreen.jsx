@@ -66,7 +66,7 @@ export default function RateScreen({ artwork, userId, onClose }) {
           <h2>{artwork.title}</h2>
           <p className="rate-screen__credit">{credit}</p>
           <p className="rate-screen__medium">{artwork.medium}</p>
-          <CollabMeter level={artwork.collab} />
+          <CollabMeter artwork={artwork} />
           {Number(artwork.collab) > 1 && <p className="rate-screen__disclosure">{DISCLOSURE}</p>}
           <div className="rate-screen__current">
             <ul className="artwork__rating">{renderStars(artwork.avgRating)}</ul>

@@ -60,7 +60,7 @@ const ArtworkDetails = ({
             {artwork.era} · {artwork.origin} · {artwork.year}
           </p>
           <p className="details__medium">{artwork.medium}</p>
-          <CollabMeter level={artwork.collab} />
+          <CollabMeter artwork={artwork} />
           {artwork.description && <p className="details__description">{artwork.description}</p>}
           {/* Lineage: who and what made this work, disclosed in full */}
           <dl className="lineage">

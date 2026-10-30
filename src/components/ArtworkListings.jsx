@@ -63,7 +63,7 @@ const ArtworkMetadata = ({ artwork }) => (
     <p>
       {artwork.era} · {artwork.origin}
     </p>
-    <CollabMeter level={artwork.collab} showLabel={false} />
+    <CollabMeter artwork={artwork} showLabel={false} />
   </div>
 );
 
