@@ -222,7 +222,8 @@ export default function FanGallery({ artworks, onRate, userId }) {
           <button type="button" className="mv-lg-rate" onClick={() => onRate(current)}>
             {userId ? "Rate this work" : "Sign in to rate"}
           </button>
-          <Link href={`/artwork/${current.id}`} className="mv-lg-open">
+          {/* prefetch off: the artwork page runs Gemini on the server, and the front card changes every few seconds */}
+          <Link href={`/artwork/${current.id}`} className="mv-lg-open" prefetch={false}>
             Open
           </Link>
         </div>

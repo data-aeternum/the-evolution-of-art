@@ -22,7 +22,8 @@ const RateScreen = dynamic(() => import("@/src/components/RateScreen.jsx"));
 
 const ArtworkItem = ({ artwork }) => (
   <li key={artwork.id}>
-    <Link href={`/artwork/${artwork.id}`}>
+    {/* prefetch off: the artwork page runs Gemini on the server, so only fetch it on a real click */}
+    <Link href={`/artwork/${artwork.id}`} prefetch={false}>
       <ArtworkCard artwork={artwork} />
     </Link>
   </li>

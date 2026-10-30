@@ -6,7 +6,7 @@
 
 import { useEffect, useRef } from "react";
 import RatingPicker from "@/src/components/RatingPicker.jsx";
-import CollabMeter from "@/src/components/CollabMeter.jsx";
+import CollabMeter, { DISCLOSURE } from "@/src/components/CollabMeter.jsx";
 import renderStars from "@/src/components/Stars.jsx";
 import { handleCritiqueFormSubmission } from "@/src/app/actions.js";
 import { signInWithGoogle } from "@/src/lib/firebase/auth.js";
@@ -67,6 +67,7 @@ export default function RateScreen({ artwork, userId, onClose }) {
           <p className="rate-screen__credit">{credit}</p>
           <p className="rate-screen__medium">{artwork.medium}</p>
           <CollabMeter level={artwork.collab} />
+          {Number(artwork.collab) > 1 && <p className="rate-screen__disclosure">{DISCLOSURE}</p>}
           <div className="rate-screen__current">
             <ul className="artwork__rating">{renderStars(artwork.avgRating)}</ul>
             <span>

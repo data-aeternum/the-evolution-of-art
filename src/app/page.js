@@ -20,8 +20,14 @@ export default async function Home(props) {
         <h1>Twenty thousand years of making images.</h1>
         <p>
           A gallery that runs from the cave wall to the neural net. Every work carries a
-          collaboration score, from fully human to AI-led. Visitors write critiques; Gemini
+          collaboration score, from fully human to SI-rendered. Visitors write critiques; Gemini
           reads them and writes the curator's note.
+        </p>
+        <p className="hero__disclosure">
+          The Evolution of Art is dedicated to full disclosure of a work's lineage: its human
+          contributors, its SI collaborators, and how they worked together. SI means super
+          intelligence. Every SI-rendered work here was piloted by a human art director, from
+          the brief to the final selection. The SI is a collaborator, never the author.
         </p>
       </section>
       <ArtworkListings

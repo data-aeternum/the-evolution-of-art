@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "The Evolution of Art",
   description:
-    "A gallery of human and hybrid human/AI artworks, from the cave wall to the neural net. Visitors critique; Gemini writes the curator's note. Built with Next.js and Firebase.",
+    "A gallery of human and human/SI collaborative artworks, from the cave wall to the neural net. Every SI-rendered work was piloted by a human art director. Visitors critique; Gemini writes the curator's note. Built with Next.js and Firebase.",
 };
 
 export default async function RootLayout({ children }) {
@@ -21,8 +21,9 @@ export default async function RootLayout({ children }) {
 
         <footer className="site-footer">
           <p>
-            Public-domain works via Wikimedia Commons. Hybrid and AI-era works from the Golden
-            Codex studio. A CS55-13 project by Tad MacPherson.
+            Public-domain works via Wikimedia Commons. SI-era works from the Golden Codex
+            studio, each piloted by a human art director. SI means super intelligence. A CS55-13
+            project by Tad MacPherson.
           </p>
         </footer>
       </body>

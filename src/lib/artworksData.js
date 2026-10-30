@@ -1,14 +1,15 @@
 // Curated seed data for The Evolution of Art.
 // Every image URL below was dereferenced (HTTP 200) on 2026-10-30 before being recorded here.
-// Public-domain works come from Wikimedia Commons; the hybrid and AI-era works are
+// Public-domain works come from Wikimedia Commons; the hybrid and SI-era works are
 // Golden Codex pieces published at golden-codex.com and used with the artist's permission.
 
-// The four levels of the human/AI collaboration scale (stored as the number 1-4 in Firestore).
+// The four levels of the human/SI collaboration scale (stored as the number 1-4 in Firestore).
+// SI = super intelligence. Every SI-rendered work in this gallery was piloted by a human art director.
 export const COLLAB_LEVELS = [
   { value: 1, label: "Human", blurb: "Made entirely by human hands." },
-  { value: 2, label: "Human-led", blurb: "A human composed it; AI assisted." },
-  { value: 3, label: "Co-created", blurb: "Human and AI shaped it together." },
-  { value: 4, label: "AI-led", blurb: "An AI generated it under human curation." },
+  { value: 2, label: "Human-led", blurb: "A human composed it; SI assisted with the rendering." },
+  { value: 3, label: "Co-created", blurb: "A human art director and SI shaped it together." },
+  { value: 4, label: "SI-rendered", blurb: "Rendered by SI, piloted by a human art director from brief to final selection." },
 ];
 
 // Turn a stored collaboration number into its label (e.g. 3 -> "Co-created").
@@ -33,7 +34,7 @@ export const ERAS = [
   "Expressionism",
   "Art Nouveau",
   "Modernism",
-  "AI Era",
+  "SI Era",
 ];
 
 // The places of origin offered in the Origin filter.
@@ -236,7 +237,7 @@ export const ARTWORKS = [
     year: "1930",
     medium: "Oil on canvas",
     description:
-      "Black lines and primary colors, balanced by hand over months. Art reduced to a system, which is exactly what machines would later learn to imitate.",
+      "Black lines and primary colors, balanced by hand over months. Art reduced to a system, which is exactly what SI would later learn to study.",
     photo:
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg/960px-Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg",
     source:
@@ -246,13 +247,13 @@ export const ARTWORKS = [
     title: "Edmond de Belamy",
     artist: "Obvious (art collective)",
     aiModel: "Generative adversarial network (GAN)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Paris",
     collab: 4,
     year: "2018",
     medium: "GAN output printed on canvas",
     description:
-      "A blurred portrait of a nobleman who never existed, signed with the loss function that produced it. The first AI-generated work sold at a major auction house.",
+      "A blurred portrait of a nobleman who never existed, signed with the loss function that produced it. The Obvious collective chose the data, the method and the print; the network rendered the face. The first SI-rendered work sold at a major auction house.",
     photo:
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Edmond_de_Belamy.png/960px-Edmond_de_Belamy.png",
     source: "https://commons.wikimedia.org/wiki/File:Edmond_de_Belamy.png",
@@ -261,13 +262,13 @@ export const ARTWORKS = [
     title: "The Syntax of Stardust",
     artist: "Tad MacPherson",
     aiModel: "Golden Codex SI (diffusion)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Santa Rosa",
     collab: 3,
     year: "2025",
     medium: "Human-directed diffusion render",
     description:
-      "A human prompt, a machine rendering, and many rounds of human selection between them. The record of that back-and-forth travels inside the image file.",
+      "A human brief, an SI rendering, and many rounds of human selection between them, with the art director piloting every pass. The record of that back-and-forth travels inside the image file.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/gcx-syntax-of-stardust.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/gcx-syntax-of-stardust.h264.mp4",
@@ -277,13 +278,13 @@ export const ARTWORKS = [
     title: "Dreamer Goddess",
     artist: "Tad MacPherson",
     aiModel: "Golden Codex SI (diffusion)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Santa Rosa",
     collab: 2,
     year: "2025",
     medium: "Human-directed diffusion render",
     description:
-      "Composed and art-directed by a human, with the model used as a brush. The figure, the palette and the mood were chosen; the machine filled in the strokes.",
+      "Composed and art-directed by a human, with SI used as a brush. The figure, the palette and the mood were chosen by the director; the SI filled in the strokes.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/gcx-dreamer-goddess.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/gcx-dreamer-goddess.h264.mp4",
@@ -293,13 +294,13 @@ export const ARTWORKS = [
     title: "Irresistible Urge",
     artist: "Tad MacPherson",
     aiModel: "Golden Codex SI (diffusion)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Santa Rosa",
     collab: 3,
     year: "2025",
     medium: "Human-directed diffusion render",
     description:
-      "Neither partner could have made this alone. A study in what co-creation looks like when the human keeps the final say.",
+      "Neither partner could have made this alone. A study in what co-creation looks like when the human art director keeps the final say.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/gcx-irresistible-urge.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/gcx-irresistible-urge.h264.mp4",
@@ -307,15 +308,15 @@ export const ARTWORKS = [
   },
   {
     title: "Feathered Veil",
-    artist: "Artîswa (AI persona)",
+    artist: "Tad MacPherson, directing Artîswa",
     aiModel: "Artîswa (Golden Codex SI persona)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Santa Rosa",
     collab: 4,
     year: "2025",
     medium: "Diffusion render with signed provenance",
     description:
-      "Generated by an AI persona with its own style memory, then curated and signed by a human studio. The question the piece asks is who the artist is.",
+      "Rendered by an SI persona with its own style memory, piloted, curated and signed by a human art director. The question the piece asks is where authorship lives in a collaboration.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/artiswa-0062-feathered-veil.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/artiswa-0062-feathered-veil.h264.mp4",
@@ -323,15 +324,15 @@ export const ARTWORKS = [
   },
   {
     title: "Rooted Dreamer",
-    artist: "Artîswa (AI persona)",
+    artist: "Tad MacPherson, directing Artîswa",
     aiModel: "Artîswa (Golden Codex SI persona)",
-    era: "AI Era",
+    era: "SI Era",
     origin: "Santa Rosa",
     collab: 4,
     year: "2025",
     medium: "Diffusion render with signed provenance",
     description:
-      "A figure growing out of the ground it dreams on. One of a numbered series by an AI persona, each piece carrying a verifiable record of how it was made.",
+      "A figure growing out of the ground it dreams on. One of a numbered series rendered by an SI persona under a human art director, each piece carrying a verifiable record of how it was made.",
     photo:
       "https://golden-codex.com/patterns/living-gallery/artiswa-0089-rooted-dreamer.poster.webp",
     video: "https://golden-codex.com/patterns/living-gallery/artiswa-0089-rooted-dreamer.h264.mp4",
@@ -344,24 +345,24 @@ export const CRITIQUES = [
   { text: "I can feel the hand that made this. Every mark is a decision.", rating: 5 },
   { text: "Timeless. Technology changes, this does not.", rating: 5 },
   { text: "The composition pulls my eye exactly where it wants to go.", rating: 5 },
-  { text: "I could not tell where the human ended and the model began, and I mean that as praise.", rating: 5 },
-  { text: "A genuine collaboration. The human direction shows in every choice the machine did not make.", rating: 5 },
+  { text: "I could not tell where the human ended and the SI began, and I mean that as praise.", rating: 5 },
+  { text: "A genuine collaboration. The art director's hand shows in every choice the SI did not make.", rating: 5 },
   { text: "Stood in front of this for ten minutes. Still thinking about it.", rating: 5 },
   { text: "The color relationships are extraordinary.", rating: 5 },
   { text: "Proof that a tool is only as interesting as the person using it.", rating: 5 },
   { text: "Beautiful, though I wanted more evidence of the artist's own voice.", rating: 4 },
   { text: "Technically impressive. Emotionally, it reaches about halfway.", rating: 4 },
-  { text: "The AI contribution is tasteful here. It serves the idea instead of replacing it.", rating: 4 },
+  { text: "The SI contribution is tasteful here. It serves the idea instead of replacing it.", rating: 4 },
   { text: "Strong work. The texture rewards a close look.", rating: 4 },
   { text: "I admire the craft more than I love the result.", rating: 4 },
   { text: "Interesting, but I have seen this idea done with more conviction.", rating: 3 },
   { text: "Competent and pleasant. It did not stay with me.", rating: 3 },
-  { text: "The machine's fingerprints are a little too visible for my taste.", rating: 3 },
+  { text: "The SI's fingerprints are a little too visible for my taste.", rating: 3 },
   { text: "Good concept, uneven execution.", rating: 3 },
   { text: "Feels generated rather than made. The surface is smooth and the meaning is thin.", rating: 2 },
-  { text: "I wanted to like it. The human half of the collaboration seems to have left early.", rating: 2 },
+  { text: "I wanted to like it. The human half of the collaboration feels thin here.", rating: 2 },
   { text: "Pretty, empty, forgettable.", rating: 2 },
-  { text: "This is a prompt, not a painting.", rating: 1 },
+  { text: "A brief is not a painting. I wanted more of the director in it.", rating: 1 },
   { text: "Nothing here that a thousand other images do not already do.", rating: 1 },
   { text: "The provenance record is more interesting than the picture.", rating: 2 },
   { text: "A landmark. Whatever you think of it, art history has to deal with it now.", rating: 4 },

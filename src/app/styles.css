@@ -1249,3 +1249,52 @@ footer {
     max-height: 48vh;
   }
 }
+
+/* ---------- Disclosure lines (human art director pilots every SI-rendered work) ---------- */
+
+.hero__disclosure {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--gilt);
+  background: rgb(201 162 74 / 0.08);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--paper);
+  font-size: 0.9rem;
+}
+
+.details__disclosure,
+.rate-screen__disclosure {
+  font-size: 0.8rem;
+  color: var(--gilt-2);
+  margin-top: 6px;
+  max-width: 65ch;
+}
+
+/* ---------- Lineage block on the artwork page ---------- */
+
+.lineage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, max-content));
+  gap: 6px 28px;
+  margin: 10px 0 4px;
+  max-width: 70ch;
+
+  & dt {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gilt-2);
+  }
+
+  & dd {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    color: var(--paper);
+  }
+
+  & a {
+    color: var(--machine-2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}

@@ -3,7 +3,7 @@
 
 import React from "react";
 import renderStars from "@/src/components/Stars.jsx";
-import CollabMeter from "@/src/components/CollabMeter.jsx";
+import CollabMeter, { DISCLOSURE } from "@/src/components/CollabMeter.jsx";
 
 const ArtworkDetails = ({
   artwork,
@@ -62,6 +62,32 @@ const ArtworkDetails = ({
           <p className="details__medium">{artwork.medium}</p>
           <CollabMeter level={artwork.collab} />
           {artwork.description && <p className="details__description">{artwork.description}</p>}
+          {/* Lineage: who and what made this work, disclosed in full */}
+          <dl className="lineage">
+            <div>
+              <dt>Human contributor</dt>
+              <dd>{artwork.artist}</dd>
+            </div>
+            <div>
+              <dt>SI collaborator</dt>
+              <dd>{artwork.aiModel && artwork.aiModel !== "None" ? artwork.aiModel : "None"}</dd>
+            </div>
+            <div>
+              <dt>How they worked</dt>
+              <dd>{artwork.medium}</dd>
+            </div>
+            {artwork.source && (
+              <div>
+                <dt>Source</dt>
+                <dd>
+                  <a href={artwork.source} target="_blank" rel="noreferrer">
+                    {artwork.source.replace(/^https?:\/\//, "").split("/")[0]}
+                  </a>
+                </dd>
+              </div>
+            )}
+          </dl>
+          {Number(artwork.collab) > 1 && <p className="details__disclosure">{DISCLOSURE}</p>}
           {children}
         </div>
       </div>

@@ -1,9 +1,10 @@
 ### The Evolution of Art
 
 A gallery that runs from the cave wall to the neural net. Each artwork carries a
-collaboration score (Human, Human-led, Co-created, AI-led). Signed-in visitors write
-critiques; Gemini reads them and writes the Curator's Note, plus a short "Machine's View"
-on how the human/AI balance shaped the work.
+collaboration score (Human, Human-led, Co-created, SI-rendered). SI means super
+intelligence, and every SI-rendered work was piloted by a human art director. Signed-in
+visitors write critiques; Gemini reads them and writes the Curator's Note, plus a short
+"Collaborator's View" in the voice of the SI that helped render the work.
 
 Built for CS55-13 (Server-Side Web Development, SRJC) as a derivative of the Firebase
 "Friendly Eats" Next.js codelab. Next.js App Router, React Server Components, Firebase
@@ -49,5 +50,6 @@ Then connect the GitHub repository to a Firebase App Hosting backend in the cons
 
 #### Image credits
 
-Public-domain works are served from Wikimedia Commons. Hybrid and AI-era works are from
-the Golden Codex studio (golden-codex.com) and used with the artist's permission.
+Public-domain works are served from Wikimedia Commons. SI-era works are from the Golden
+Codex studio (golden-codex.com), each piloted by a human art director, and used with the
+artist's permission.
