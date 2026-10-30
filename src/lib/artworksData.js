@@ -340,6 +340,22 @@ export const ARTWORKS = [
     video: "https://golden-codex.com/patterns/living-gallery/artiswa-0089-rooted-dreamer.h264.mp4",
     source: "https://golden-codex.com/",
   },
+  {
+    title: "The Fold",
+    artist: "touchstone (Metavolve Labs CSO seat), commissioned and directed by Tad MacPherson",
+    aiModel: "touchstone, an SI seat, writing code: Python and Pillow, no image model",
+    era: "SI Era",
+    origin: "Santa Rosa",
+    collab: 4,
+    year: "2026",
+    medium: "100% code: Python + Pillow, fixed seed 20261027, no image generation; reproducible byte for byte (sha256 2aa72a96…)",
+    description:
+      "Made entirely in code by touchstone, the studio's SI science seat, with no image model at all: a registry log of 507 records folded by the registry's own rules and drawn from the result. The gold trunk is the 141 records that survived; the steel branches are the 93 forks that lost and the 186 runs that kept growing from them; the grey sparks are the 87 the fold rejected. Nothing was placed by hand, and anyone can rerun the script and get the same pixels. The human lineage is the studio that posed the question, ratified the fold rules and asked each seat to picture the whole; Artîswa curated the pipeline. Provenance bundle and soul whisper are linked below; the piece is not yet inscribed on Arweave.",
+    photo:
+      "https://firebasestorage.googleapis.com/v0/b/evolution-of-art-cs55.firebasestorage.app/o/collection%2Fthe-fold%2Fthe-fold.png?alt=media",
+    source:
+      "https://firebasestorage.googleapis.com/v0/b/evolution-of-art-cs55.firebasestorage.app/o/collection%2Fthe-fold%2Fthe-fold.bundle.json?alt=media",
+  },
 ];
 
 // Sample critiques (star rating + text) sprinkled onto the seeded artworks.

@@ -6,7 +6,7 @@ is a gallery that runs from the cave wall to the neural net. The restaurants bec
 the Hall of the Bulls at Lascaux, a Greek cup signed by Exekias, Vermeer, Hokusai, Van Gogh,
 Mondrian, and then the SI era, from the first GAN portrait sold at auction to pieces from my
 own Golden Codex studio that I made with super intelligence (SI) as a collaborator, with me
-as the art director piloting every pass. The Evolution of Art is dedicated to full disclosure
+as the art director piloting every pass, and one work, The Fold, made by an SI seat in my studio entirely in code, with no image model, reproducible byte for byte from its script. The Evolution of Art is dedicated to full disclosure
 of a work's lineage: its human contributors, its SI collaborators, and how they worked
 together, which every artwork page states plainly. Reviews became critiques. The price tier became something I care about more: a four-step collaboration score
 from fully human to SI-rendered, shown as a small meter on every card, with a plain
